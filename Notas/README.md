@@ -35,7 +35,7 @@ En punteros la regla de tres es:
 
 **Nota:** Si la clase que estamos desarrollando necesita **uno** de estos tres, probablemente necesita los **tres**. Por teoría básica de punteros, como vemos arriba.
 
-**¿Por qué es importante el constructor copia?** Puede pasar que a B se le asigna el objeto B:
+**¿Por qué es importante el constructor copia?** Puede pasar que a B se le asigna el objeto A:
 
 ```cpp
 MatrizDinamica<int> A(2, 2);
