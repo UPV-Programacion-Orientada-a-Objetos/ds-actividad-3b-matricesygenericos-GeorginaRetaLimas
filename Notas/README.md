@@ -1,5 +1,5 @@
 # 📝 Notas de Creación de clases
-Recordatorios a mi misma y anotaciones durante la actividad
+Estos son los recordatorios y anotaciones que hice durante el desarrollo de la actividad
 
 ### ☀️ Clase normal:
 | Archivo | Terminación | Notas                            |
@@ -12,7 +12,7 @@ Recordatorios a mi misma y anotaciones durante la actividad
 |:--------------|:-----------:|:--------------------------------|
 | Clase Templete| .h          | Declaraciones e Implementación  |
 
-⚠️ En las clases no se se separan en dos, no tienen cpp por cuestiones de compilador
+⚠️ En las clases template no se se separan en dos, no tienen cpp por cuestiones de compilador
 
 ### 🎲 Conceptos aprendidos
 
@@ -28,6 +28,7 @@ Un destructor es un método especial que se ejecuta **automáticamente** cuando 
 ### 🛠️ La regla de los tres:
 En punteros la regla de tres es:
 
+| Regla                  | Acción          |
 |:-----------------------|:----------------|
 | Deestructor            | Liberar memoria |
 | Constructor de copia   | Copiar datos    |
@@ -44,7 +45,7 @@ A.setValor(0, 0, 5);
 MatrizDinamica<int> B = A;
 ```
 
-Lo que esta pasando es que **los datos de A no se pasan a B**, si no que **B apunta a la dirección de A**, entonces si en el futuro A cambia de valor B tambien lo hara.
+Lo que esta pasando es que **los datos de A no se pasan a B**, si no que **B apunta a la dirección de A**, entonces si en el futuro A cambia de valor, B tambien lo hara.
 
 Es por eso que se necesita hacer un constructor copia, aún mas cuando el programa termine y el destructor se ejecute, porque:
 
@@ -103,3 +104,6 @@ Porque es necesario acceder a dos matrices y no debe pertenecer a ninguna, es in
 
 ### 👨🏿‍🦼 Función Estática
 Una función estática es un método que **pertenece a la clase** pero **no necesita un objeto** para ser llamado
+
+#### ¿Por qué en esta práctica es necesario y por que se escogio esta?
+Porque es necesario acceder a dos matrices para hacer el procedimiento, y para manejar una funcion estatica no se requiere de un objeto, ademas, en este caso la codificación de una función estatica es más corta y entendible, quizas mandar a llamar es más largo, pero no es mucho y vale la pena.
