@@ -33,6 +33,28 @@ En punteros la regla de tres es:
 | Constructor de copia   | Copiar datos    |
 | Operador de asignación | Asignar datos   |
 
+**Nota:** Si la clase que estamos desarrollando necesita **uno** de estos tres, probablemente necesita los **tres**. Por teoría básica de punteros, como vemos arriba.
+
+**¿Por qué es importante el constructor copia?** Puede pasar que a B se le asigna el objeto B:
+
+```cpp
+MatrizDinamica<int> A(2, 2);
+A.setValor(0, 0, 5);
+
+MatrizDinamica<int> B = A;
+```
+
+Lo que esta pasando es que **los datos de A no se pasan a B**, si no que **B apunta a la dirección de A**, entonces si en el futuro A cambia de valor B tambien lo hara.
+
+Es por eso que se necesita hacer un constructor copia, aún mas cuando el programa termine y el destructor se ejecute, porque:
+
+```cpp
+
+A -> Se va a liberar
+
+B -> Apunta a A pero A ya esta limpio, causando Error
+```
+
 ### 🚫 Regla Multiplicación de Matrices:
 Para multiplicar una matriz A x B:
 - El número de **Columnas de A** debe ser **igual** que el número de **Filas de B**.

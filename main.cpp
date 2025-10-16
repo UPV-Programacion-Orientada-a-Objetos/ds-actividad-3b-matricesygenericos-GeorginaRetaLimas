@@ -20,7 +20,7 @@ int main() {
     for(int i = 0; i < 2; i ++){
         for(int j = 0; j < 3; j ++){
             int valor;
-            std::cout<<"A ["<<i<<"][ "<<j<< " ]: "<std::endl;
+            std::cout<<"A ["<<i<<"]["<<j<< "]: ";
             std::cin >> valor;
             A.setValor(i, j, valor);
         }
@@ -32,12 +32,13 @@ int main() {
     // Redimencionamos
     std::cout << "\n>> Redimensionando Matriz A <<\n";
     A.redimensionar(3, 3);
-    A.mostrar();
+    
     std::cout<<"\nNuevos valores inicializados en 0"<<std::endl;
 
     // Matriz B como Float
     std::cout<<"\n>> Prueba de Multiplicacion (Tipo FLOAT) <<"<<std::endl;
     std::cout<<"Creando Matriz B (Tipo FLOAT) de 3x2..."<<std::endl;
+    MatrizDinamica<float> B(3, 2);
 
     // Inicializamos matriz B
     std::cout<<"Ingresar valores para B (3x2): "<<std::endl;

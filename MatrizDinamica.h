@@ -30,6 +30,24 @@ public:
         }
     }
 
+    // Constructor copia
+    MatrizDinamica(const MatrizDinamica<T>& otra){
+        // Copiar dimensiones
+        filas = otra.filas;
+        columnas = otra.columnas;
+        
+        // Reservar nueva memoria
+        datos = new T*[filas];
+        for(int i = 0; i < filas; i++){
+            datos[i] = new T[columnas];
+            
+            // Copiar cada elemento
+            for(int j = 0; j < columnas; j++){
+                datos[i][j] = otra.datos[i][j];
+            }
+        }
+    }
+
     // Destructor
     ~MatrizDinamica(){
         // Primero debemos liberar la memoria de cada fila
@@ -47,7 +65,7 @@ public:
         if ( i >= 0 && i < filas && j >= 0 && j < columnas){
             datos[i][j] = valor;
             // Mostramos en consola para que sea bonito
-            std::cout << "[" << i << "]" << "[" << j << "] = " << valor <<std::endl;
+            //std::cout << "[" << i << "]" << "[" << j << "] = " << valor <<std::endl;
         } else {
             std::cout << "Error: Indice invalido";
         }
@@ -140,7 +158,7 @@ public:
 
         // Multiplicación
         for(int i = 0; i < A.filas ; i++){
-            for(j = 0; j < B.columnas; j++){
+            for(int j = 0; j < B.columnas; j++){
                 T suma = 0;
 
                 for(int k = 0; k < A.columnas; k++){
